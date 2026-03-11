@@ -1,6 +1,6 @@
 body{
-    background: rgb(34,193,195);
-    background: radial-gradient(circle, #0D3259 0%, rgba(34,193,195,1) 100%);
+    background: rgb(195, 112, 34);
+    background: radial-gradient(circle, #4093eb 0%, rgb(195, 112, 34) 100%);
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
@@ -74,13 +74,13 @@ img{
     border: none;
     font-size: 16px;
     font-weight: bold;
-    border-color: #0D3259;
+    border-color: #000;
     background-color: white;
-    color: #0D3259;
+    color: #000;
 }
 
 .reset-btn:hover{
     cursor: pointer;
     color: white;
-    background-color: #144b85;
+    background-color: #000;
 }

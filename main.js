@@ -116,3 +116,36 @@ function uncover(id){
     }
 }
 
+function resetGame(){
+
+    // Reiniciar variables
+    uncoveredCards = 0;
+    card1 = null;
+    card2 = null;
+    firstResult = null;
+    secondResult = null;
+    movements = 0;
+    totalHits = 0;
+    timer = false;
+    timeRewind = initialTimer;
+
+    // Detener tiempo
+    clearInterval(timeOut);
+
+    // Mezclar números nuevamente
+    numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
+    numbers = numbers.sort(()=> Math.random() - 0.5);
+
+    // Limpiar tablero
+    for(let i = 0; i <= 15; i++){
+        let card = document.getElementById(i);
+        card.innerHTML = '';
+        card.disabled = false;
+    }
+
+    // Resetear UI
+    showMovements.innerHTML = `Movements: 0`;
+    showHits.innerHTML = `Total Hits: 0`;
+    showTime.innerHTML = `Time Left: ${initialTimer} Seconds`;
+}
+
